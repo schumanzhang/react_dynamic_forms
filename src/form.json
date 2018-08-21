@@ -1,0 +1,94 @@
+[
+    {
+        "name": "name",
+        "label": "Name",
+        "inputType": "text",
+        "errorMsg": {
+            "required": "Name field is required",
+            "rule": "Name format is not correct"
+        },
+        "validation": {
+            "required": true,
+            "rule": "[a-zA-Z\\s]+"
+        }
+    },
+    {
+        "name": "dob",
+        "label": "Date of Birth",
+        "inputType": "date",
+        "errorMsg": {
+            "required": "Date of birth field is required",
+            "rule": "Age must be over 18"
+        },
+        "validation": {
+            "required": true,
+            "rule": "age"
+        }
+    },
+    {
+        "name": "gender",
+        "label": "Gender",
+        "inputType": "select",
+        "errorMsg": {
+        },
+        "options": ["male", "female"],
+        "validation": {
+            "required": false,
+            "rule": ""
+        }
+    },
+    {
+        "name": "contact",
+        "label": "Contact Number",
+        "inputType": "text",
+        "errorMsg": {
+        },
+        "validation": {
+            "required": false,
+            "rule": ""
+        },
+        "children": [
+            {
+                "name": "home",
+                "inputType": "text"
+            },
+            {
+                "name": "mobile",
+                "inputType": "text"
+            }
+        ]
+    },
+    {
+        "name": "guardian",
+        "label": "Guardian Details",
+        "inputType": "text",
+        "errorMsg": {
+            "required": "Guardian details required when consent is ticked"
+        },
+        "validation": {
+            "required": false,
+            "rule": ""
+        },
+        "children": [
+            {
+                "name": "name",
+                "inputType": "text"
+            },
+            {
+                "name": "contact",
+                "inputType": "text"
+            }
+        ]
+    },
+    {
+        "name": "consent",
+        "label": "Consent",
+        "inputType": "options",
+        "errorMsg": {
+        },
+        "validation": {
+            "required": false,
+            "rule": ""
+        }
+    }
+]
